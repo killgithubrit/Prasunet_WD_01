@@ -1,0 +1,182 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  transition: background-color 0.3s;
+}
+
+nav .logo a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s, transform 0.3s;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+nav ul li a i {
+  font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+  color: #fff;
+  background-color: #007bff; /* Blue color on hover */
+  transform: translateY(-3px); /* Lift effect */
+}
+
+/* Section Styling */
+section {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+/* Hero Section */
+#home {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url('https://images.pexels.com/photos/4348403/pexels-photo-4348403.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.hero-content .btn {
+  background: #007bff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.hero-content .btn:hover {
+  background: #0056b3; /* Darker blue on hover */
+}
+
+/* About, Courses, Testimonials, Contact Sections */
+#about, #courses, #testimonials, #contact {
+  background-color: #f4f4f4;
+  padding: 5rem 2rem;
+}
+
+#about h2, #courses h2, #testimonials h2, #contact h2 {
+  margin-bottom: 1.5rem;
+  color: #007bff;
+}
+
+.course-list, .testimonial-list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.course-item, .testimonial-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33% - 2rem);
+  max-width: calc(33% - 2rem);
+}
+
+.course-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.course-item h3 {
+  margin-bottom: 1rem;
+  color: #007bff;
+}
+
+.testimonial-item p {
+  font-style: italic;
+}
+
+/* Scrolled Navigation */
+.scrolled {
+  background-color: #007bff;
+}
+
+.scrolled .logo a, .scrolled ul li a {
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .course-item, .testimonial-item {
+      flex: 1 1 100%;
+      max-width: 100%;
+  }
+}
